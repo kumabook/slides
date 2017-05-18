@@ -1,0 +1,14 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "description": "My slides",
+  "private": true,
+  "repository": "https://github.com/kumabook/slides",
+  "author": "Hiroki Kumamoto <kumabook@live.jp>",
+  "scripts": {
+    "start": "browser-sync start --server --files \"./**/*\""
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.11"
+  }
+}
