@@ -42,12 +42,11 @@ pub fn mget<'a, T: Model<'a>>(req: &mut Request) -> IronResult<Response> {
 
 
 
-# macro_rules!: pattern-based declarative macros
+## macro_rules!: pattern-based declarative macros
 
 
 
 ### First macro
-
 
 ```
 macro_rules! my_vec {
@@ -346,5 +345,7 @@ fn impl_hello_world(ast: &syn::MacroInput) -> quote::Tokens {
   - https://doc.rust-lang.org/reference/macros.html
   - https://doc.rust-lang.org/reference/items.html
   - https://doc.rust-lang.org/book/glossary.html#abstract-syntax-tree
+
+
 - Others
   - http://words.steveklabnik.com/an-overview-of-macros-in-rust
