@@ -7,10 +7,12 @@
     <div class="reveal">
       <div class="slides">
         <section
-          id="slides"
+          name="slides"
           data-markdown="./docs/index.md"
-          data-separator="^\n\n"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
           data-separator-notes="^Note:"
+          data-charset="utf-8"
         >
         </section>
       </div>
@@ -30,7 +32,7 @@
        }
        return results[2];
      }
-     var slidesContainer = document.getElementById("slides");
+     var slidesContainer = document.getElementsByName("slides")[0];
      var name = queryOf("name") || "index";
      slidesContainer.setAttribute("data-markdown", "./docs/" + name + ".md");
      Reveal.initialize({
