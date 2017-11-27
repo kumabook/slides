@@ -1,8 +1,8 @@
 # My Slides
 
-## index
+# index
 
-- [rust_macro](https://kumabook.github.io/slides/?name=rust_macro)
+- [index](https://kumabook.github.io/slides/)
 
 
 ## Serve slides on local
