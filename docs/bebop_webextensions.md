@@ -12,7 +12,7 @@
   - [Chrome extension](https://chrome.google.com/webstore/detail/bebop/idiejicnogeolaeacihfjleoakggbdid)
 
 
-
+<!--
 ### Motivation
 
 - vimperator doesn't work in Firefox 57+
@@ -24,7 +24,7 @@
   - A. command line tool for browsing
     - My answer "helm on browser"
 
-
+-->
 
 ### bebop
 
@@ -56,7 +56,11 @@ search candidates from these sources:
 - tab
 - history
 - bookmark
+- session
+- command
+- hatebu
 
+<!--
 
 ## Sources: link
 
@@ -70,11 +74,14 @@ search candidates from these sources:
 - Add link marker and highlight selected element
   - tips: only visible elements
 
+-->
+
 
 
 # popup
 
 <img src="./images/bebop_popup.png" style="border: none;">
+
 
 
 ## popup: filtering
