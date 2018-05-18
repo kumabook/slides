@@ -2,29 +2,16 @@
 
 
 
-### What's bebop
+### About
 
-- Groovy webtension that offers command line interface like emacs helm for browsing
-- Alternative to vimperator
-- [source](https://github.com/kumabook/bebop)
-- Firefox and chrome
+- Motivation: I like emacs and emacs helm.
+  - Use browser like cli
+- Firefox and chrome (and vivaldi)
   - [Firefox addon](https://addons.mozilla.org/ja/firefox/addon/bebop/)
   - [Chrome extension](https://chrome.google.com/webstore/detail/bebop/idiejicnogeolaeacihfjleoakggbdid)
 
 
-<!--
-### Motivation
 
-- vimperator doesn't work in Firefox 57+
-- Other alternatives exist:
-  - [tridactyl](https://github.com/cmcaine/tridactyl)
-  - [vim-vixen](https://github.com/ueokande/vim-vixen)
-    - Shortcut keys work only in content.
-- Q. What is it that I want?
-  - A. command line tool for browsing
-    - My answer "helm on browser"
-
--->
 
 ### bebop
 
@@ -60,28 +47,6 @@ search candidates from these sources:
 - command
 - hatebu
 
-<!--
-
-## Sources: link
-
-- Get links (clickable elements) in the current tab
-  - content_script of WebExtensions
-  - `a`
-  - `button`
-  - `input[type="button"]`
-  - `input[type="submit"]`
-  - `[role="button"]`
-- Add link marker and highlight selected element
-  - tips: only visible elements
-
--->
-
-
-
-# popup
-
-<img src="./images/bebop_popup.png" style="border: none;">
-
 
 
 ## popup: filtering
@@ -95,6 +60,7 @@ search candidates from these sources:
   - narrow down to link candidates searched with `阿部寛`
 
 
+
 ### popup: command select
 
 - list  avaidable commands about selected candidate
@@ -102,6 +68,7 @@ search candidates from these sources:
   - show command list for current candidate
 
 <img src="./images/bebop_command_list.png" height="150px" style="border: none;">
+
 
 
 ### popup: multiple candidates
@@ -118,22 +85,12 @@ search candidates from these sources:
 
 ### Command
 
-- command consists of `label`, `icon`, `handler` and `contentHandler`
-- label
-  - string that is displayed in popup ui
-- icon
-  - icon image for popup ui
+- open url
+- delete bookmark
+- manage cookie
+- ...
 
 
-## Command: handler
-
-- handler (background handler)
-  - full access to WebExtensions API
-  - `Array<Candidate> -> Promise<Any>`
-- content handler
-  - restricted access to WebExnteions API
-  - access to dom API
-  - `Array<Candidate> -> Promise<Any>`
 
 
 ### Development
@@ -141,35 +98,18 @@ search candidates from these sources:
 - popup ... ui
   - react + redux + redux-saga
 - content_script
-  - run functions by popup message
+  - highlight links
 - background script
   - manage popup and content_script
+  - run command with webextension api
+  - save hatena bookmarks to indexedDB
+- options_ui
+  - save options with storage api
+
 
 
 ### Restriction
 
 - `C-n` can't be override
   - security reason?
-- window can't focus the popup input immediately
-
-
-
-### Future work
-
-- Add more built-in command
-  - navigation
-  - add bookmark
-  - cookie manager
-  - history manager
-- setting page
-  - default candidates order
-  - default candidates number
-
-
-### Future work: plugin
-
-- sources
-  - web based
-  - message passing between anoter WebExntenions
-- commands
-  - register a command dynamically for cetern candidate type
+- windows can't focus the popup input immediately
